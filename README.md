@@ -1,2 +1,3 @@
 # LOL-Insights
  
+Using the Riot Games Live Client Data API, this project pulls real-time in game data for the current player. Then the data-processing pipeline kicks off, with a java kafka producer fetching the API data, and sending it to kafka topics. Flink then processes the game events, player stats, and team info in real time to give the player insights into potential suggestions for in game actions. The structured match data is uploaded to a MongoDB database for post-game analytics
