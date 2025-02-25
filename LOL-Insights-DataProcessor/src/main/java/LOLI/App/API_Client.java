@@ -12,6 +12,8 @@ import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.X509Certificate;
 
+
+
 public class API_Client {
     public static HttpResponse<String> response;
     private static final String API_URL = "https://127.0.0.1:2999/liveclientdata/allgamedata";
@@ -55,9 +57,9 @@ public class API_Client {
     public void RequestApiData(){
         // Send the request
         try{
-            System.out.println("Before" + response);
+            //System.out.println("Before" + response);
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println("After" + response);
+            //System.out.println("After" + response);
 
         }
         catch(Exception e){
